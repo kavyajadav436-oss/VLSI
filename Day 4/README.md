@@ -259,8 +259,8 @@ When `sel` is LOW, the output follows `i0`.
 When `sel` is HIGH, the output follows `i1`.
 
 ### RTL Waveform
+<img width="958" height="930" alt="image" src="https://github.com/user-attachments/assets/1e05dab8-b7a7-4c84-b143-e2f51cf1b280" />
 
-![Ternary MUX RTL Waveform](images/ternary_mux_rtl.png)
 
 The waveform confirms the expected functional behaviour of the MUX at the RTL level.
 
@@ -276,7 +276,8 @@ The MUX was mapped to the following standard cell:
 
 ### Synthesized Netlist
 
-![Ternary MUX Synthesized Netlist](images/ternary_mux_netlist.png)
+<img width="1920" height="1012" alt="image" src="https://github.com/user-attachments/assets/65e94d25-6790-4453-bf67-be46fb52cf9f" />
+
 
 The synthesized netlist shows how the RTL description is transformed into a standard-cell based hardware implementation.
 
@@ -293,6 +294,7 @@ The synthesized netlist was then used for Gate-Level Simulation.
 The testbench was used to apply the required input combinations and the resulting waveform was observed using GTKWave.
 
 ### Gate-Level Waveform
+<img width="1920" height="1012" alt="image" src="https://github.com/user-attachments/assets/2cfb8a7e-6d8f-4d97-b529-b8dabaffa29c" />
 
 ![Ternary MUX Gate-Level Waveform](images/ternary_mux_gls.png)
 
@@ -347,8 +349,8 @@ This can result in incorrect RTL simulation behaviour.
 The Bad MUX was simulated to observe the effect of the incomplete sensitivity list.
 
 ### RTL Waveform
+<img width="1920" height="1012" alt="image" src="https://github.com/user-attachments/assets/56c31374-62f8-4ea8-9300-bd4dac6b08e9" />
 
-![Bad MUX RTL Waveform](images/bad_mux_rtl.png)
 
 The waveform demonstrates that changes in `i0` or `i1` may not immediately update the output when `sel` remains unchanged.
 
@@ -364,7 +366,8 @@ Therefore, an incomplete sensitivity list can cause a difference between RTL sim
 
 ### Gate-Level Waveform
 
-![Bad MUX Gate-Level Waveform](images/bad_mux_gls.png)
+<img width="1920" height="1012" alt="image" src="https://github.com/user-attachments/assets/019ac1ee-c779-405e-bebb-848eb37cd267" />
+
 
 The Gate-Level Simulation can be compared with the RTL waveform to observe the difference between simulation behaviour and synthesized hardware behaviour.
 
@@ -434,8 +437,8 @@ The logic can be represented conceptually as:
     c ------------------/
 
 ### RTL Waveform
+<img width="1920" height="1012" alt="image" src="https://github.com/user-attachments/assets/516971f3-cf9a-47d5-bc03-8a85b04ec347" />
 
-![Blocking Assignment RTL Waveform](images/blocking_caveat_rtl.png)
 
 The waveform demonstrates the behaviour of the intermediate signal and the output during RTL simulation.
 
@@ -453,7 +456,8 @@ The relevant synthesized logic includes:
 
 ### Synthesized Netlist
 
-![Blocking Assignment Synthesized Netlist](images/blocking_caveat_netlist.png)
+<img width="1920" height="1012" alt="image" src="https://github.com/user-attachments/assets/d01f766f-8cee-484b-8845-e2350439df9d" />
+
 
 The synthesized netlist represents the combinational hardware generated from the RTL description.
 
@@ -465,7 +469,8 @@ The synthesized netlist was then simulated at the gate level.
 
 ### Gate-Level Waveform
 
-![Blocking Assignment Gate-Level Waveform](images/blocking_caveat_gls.png)
+<img width="1920" height="1012" alt="image" src="https://github.com/user-attachments/assets/8be7bb01-257c-421b-b52d-680313ef1c68" />
+
 
 The Gate-Level Simulation waveform represents the behaviour of the synthesized circuit.
 
